@@ -1,11 +1,6 @@
-m = {
-    'aa': {
-        1: 1
-    },
-    'a2': {
-        1: 1
-    }
-}
+from datetime import datetime, timedelta
 
-n = 1000000
-print(f'{n:,}')
+n = datetime.now()
+print(n)
+t = timedelta(minutes=25)
+print((n + t).strftime('%H:%M'))

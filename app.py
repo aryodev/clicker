@@ -58,7 +58,9 @@ def bot(index):
     global correct_requests, wrong_requests
     
     while True:
-        print(f"{index}: Start to request")
+        
+        print(f"{index}: Start to request at {datetime.datetime.now().strftime('%H:%M')}")
+        
         body = calculate_request_body(data[index])
         api_key = data[index].get('key', None)
         last_taps_recover_per_sec = data[index].get('tapsRecoverPerSec', 10)
@@ -71,8 +73,9 @@ def bot(index):
             'Content-Type': 'application/json'
         }
 
-        response = requests.post(
-            'https://api.hamsterkombatgame.io/clicker/sync', data=json.dumps(body), headers=headers)
+        response = requests.post('https://api.hamsterkombatgame.io/clicker/sync',
+                                #  data=json.dumps(body),
+                                headers=headers)
 
         
         result = response.ok
@@ -107,25 +110,22 @@ def bot(index):
                     json.dump(data, f, indent=4)
             else:
                 wrong_requests += 1
-                logging.info(f'Wrong request with {index} account ; status code {response.status_code}!')
+                print(f'Wrong request with {index} account ; status code {response.status_code}!')
                 if response.status_code == 401:
                     break
 
 
-        sleep_time = random.randint(10, 100)
-        str_sleep_time = str( datetime.timedelta(seconds=sleep_time)  )[:-3]
+        sleep_time = random.randint(3600, 10800)
+        str_sleep_time = (datetime.datetime.now() + datetime.timedelta(seconds=sleep_time)).strftime('%H:%M')
         operation_text = f'{Fore.GREEN + index}: {datetime.datetime.now().strftime("%H:%M")} , status: {response.status_code}, NewCoins: {Fore.YELLOW}{newbalanceCoins:,}, {Fore.BLUE}{str_sleep_time}'
 
         print(operation_text)
         list_of_operations.append(operation_text)
 
-        #sleep_time = random.randint(3600, 10600)
-        # print(f'{Fore.GREEN + index} sleeped for {Fore.BLUE + str(sleep_time)} seconds')
-        # sleep_time = random.randint(2, 10)
         time.sleep(sleep_time)
 
 
 for item in data:
-    threading.Thread(target=bot, args=(item,)).start()
+    threading.Thread(target=bot, args=(item,)).start() 
 
 

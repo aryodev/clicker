@@ -3,36 +3,36 @@
         "key": "1720974428966kCPMxDpA6aNsp8IDqA7qucbFFvfClrtqx5Bq9e1a7GUzPEEKJhCy6srGpeKZ1mfP930529644",
         "MaxTaps": 6500,
         "tapsRecoverPerSec": 3,
-        "lastRequestTime": 1721107148.967561,
+        "lastRequestTime": 1721110675.622747,
         "earnPerTap": 8,
         "availableTaps": 6500,
-        "balanceCoins": 27743042
+        "balanceCoins": 7370172
     },
     "acc2": {
         "key": "1720972990980eV9uHwfESRwJHTswjVMEYkVXACBgfpatOOyDENqDyVpo3IzfWGzSukYk7QTSWZTw5965178309",
         "MaxTaps": 4500,
         "tapsRecoverPerSec": 3,
-        "lastRequestTime": 1721107175.266775,
+        "lastRequestTime": 1721110675.623739,
         "earnPerTap": 8,
         "availableTaps": 4500,
-        "balanceCoins": 24082518
+        "balanceCoins": 3546752
     },
     "acc3": {
         "key": "17209746396521WjD6LS82XvAXudaUFStOQ3s7b8jtHQDCjrL7trGf1LKAusDgTd4sGPGsMHZiDyB6873613985",
         "MaxTaps": 9000,
         "tapsRecoverPerSec": 3,
-        "lastRequestTime": 1721107126.640821,
+        "lastRequestTime": 1721110675.624736,
         "earnPerTap": 16,
         "availableTaps": 9000,
-        "balanceCoins": 22098939
+        "balanceCoins": 7572128
     },
     "acc4": {
         "key": "1720974737127L0WByfLUgba8hdN4z0DdO3EC3ZEEAvJzo4zI23cQdqtAMaU864xYJMfvSfNmPubE7434106446",
         "MaxTaps": 4500,
         "tapsRecoverPerSec": 3,
-        "lastRequestTime": 1721107175.009734,
+        "lastRequestTime": 1721110675.624736,
         "earnPerTap": 8,
         "availableTaps": 4500,
-        "balanceCoins": 21934420
+        "balanceCoins": 12769885
     }
 }
