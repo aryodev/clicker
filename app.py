@@ -116,7 +116,6 @@ def bot(index):
 
         time.sleep(sleep_time)
         
-        print(f"{index}: SLEEP TIME IS OVER, Start to request at {datetime.datetime.now().strftime('%H:%M')}")
 
 
 for item in data:
