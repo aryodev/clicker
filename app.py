@@ -53,8 +53,6 @@ def bot(index):
     
     while True:
         
-        print(f"{index}: Start to request at {datetime.datetime.now().strftime('%H:%M')}")
-        
         body = calculate_request_body(data[index])
         api_key = data[index].get('key', None)
         last_taps_recover_per_sec = data[index].get('tapsRecoverPerSec', 10)
@@ -117,6 +115,8 @@ def bot(index):
         list_of_operations.append(operation_text)
 
         time.sleep(sleep_time)
+        
+        print(f"{index}: SLEEP TIME IS OVER, Start to request at {datetime.datetime.now().strftime('%H:%M')}")
 
 
 for item in data:
