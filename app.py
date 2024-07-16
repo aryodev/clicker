@@ -4,8 +4,6 @@ import requests
 import threading
 import datetime
 from datetime import timezone
-from flask import Flask
-import logging
 import random
 from colorama import Fore
 
@@ -13,10 +11,6 @@ correct_requests = 0
 wrong_requests = 0
 lock = threading.Lock()
 list_of_operations = []
-
-# Configure logging
-logging.basicConfig(filename='app.log', level=logging.INFO,
-                    format='%(asctime)s - %(message)s')
 
 with open('data.json', 'r') as f:
     data = json.load(f)
@@ -127,5 +121,6 @@ def bot(index):
 
 for item in data:
     threading.Thread(target=bot, args=(item,)).start() 
+
 
 
